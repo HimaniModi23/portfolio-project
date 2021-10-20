@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Place Order</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark header">
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" alt="Logo" class="header-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <span class="nav-link" >|</span>
+            <li class="nav-item">
+            <a class="nav-link" href="./place-order.html">Place Order</a>
+            </li>
+            <span class="nav-link" >|</span>
+            <li class="nav-item">
+                <a class="nav-link" href="./cart.html">Cart</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+  
+    <div class="container content">
+      <div id="no-cart-items" class="text-center" style="display: none;">
+        <h1 class="display-2">
+          There are no items in you cart!
+        </h1>
+      </div>
+      <div id="cart-content">
+        <div class="row">
+          <div class="col-6">
+            <h1>Your Order</h1>
+          </div>
+          <div class="col-6 text-right">
+            <button id="clearCart" class="btn btn-danger">
+              Clear Cart
+            </button>
+          </div>
+        </div>
+        
+        <div id="error"></div>
+       
+        <div id="cartItems">
+          <table class="table"  style="width: 100%;">
+            <thead>
+              <tr>
+                <th class="font-weight-bold" style="width: 10%;">Size</th>
+                <th class="font-weight-bold text-center" style="width: 10%;">Qty</th>
+                <th class="font-weight-bold text-center" style="width: 20%;">Base Sauce</th>
+                <th class="font-weight-bold text-center" style="width: 30%;">Toppings</th>
+                <th class="font-weight-bold text-center" style="width: 10%;">Price</th>
+              </tr>
+            </thead>
+            <tbody id="cart-item-tbl">
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4" class="text-right font-weight-bold">Sub-total</td>
+                <td colspan="1" class="pl-5" id="sub-total">$180</td>
+              </tr>
+              <tr>
+                <td colspan="4" class="text-right font-weight-bold">HST</td>
+                <td colspan="1" class="pl-5" id="tax"></td>
+              </tr>
+              <tr>
+                <td colspan="4" class="text-right font-weight-bold">Total</td>
+                <td colspan="1" class="pl-5" id="total"></td>
+              </tr>
+            </tfoot>
+          </table>
+          <div class="row">
+            <div class="col-6 text-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="deliveryType"  value="Pick-Up" id="pickup">
+                  <label class="form-check-label" for="pickup">
+                    Pick-Up
+                  </label>
+                </div>
+            </div>
+            <div class="col-6 text-center">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="deliveryType"  value="Delivery" id="delivery">
+                <label class="form-check-label" for="delivery">
+                  Delivery
+                </label>
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <button class="btn btn-success px-4 font-weight-bold" id="placeOrder">Place Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+       
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./js/price-calculator.js"></script>
+    <script src="./js/cart.js"></script>
+	   <footer>
+                 Copyright &copy; 2020 Himani Modi<br>
+                 
+       </footer>
+</body>
+</html>

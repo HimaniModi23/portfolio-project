@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Place Order</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark header">
+        <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" alt="Logo" class="header-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <span class="nav-link" >|</span>
+            <li class="nav-item">
+            <a class="nav-link" href="./place-order.html">Place Order</a>
+            </li>
+            <span class="nav-link" >|</span>
+            <li class="nav-item">
+                <a class="nav-link" href="./cart.html">Cart</a>
+            </li>
+            
+        </ul>
+        </div>
+    </nav>
+    <div class="container content">
+      <div class="row">
+        <div class="col-6">
+          <h1>Place Order</h1>
+        </div>
+        <div class="col-6 text-right">
+          <a href="./cart.html" class="btn btn-primary font-weight-bold">
+           Checkout
+          </a>
+        </div>
+      </div>
+        <hr>
+        <div id="error"></div>
+        <form id="pizza-form">
+            <div class="row">
+                <div class="col-md-3 text-right">
+                    <label class="form-check-label" for="qty">Select Qty</label>
+                </div>
+                <div class="col-md-9">
+                  <input type="number" id="qty" name="qty" min="1" value="1" class="form-control">
+                </div>
+            </div>
+           <div class="row mt-3">
+               <div class="col-md-3 text-right">Select Size</div>
+               <div class="col-md-9">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="small" value="small">
+                    <label class="form-check-label" for="small">
+                      Small (8-10")
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="medium" value="medium">
+                    <label class="form-check-label" for="medium">
+                      Medium (12")
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="large" value="large">
+                    <label class="form-check-label" for="large">
+                        Large (14")
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="size" id="xlarge" value="xlarge">
+                    <label class="form-check-label" for="xlarge">
+                        X-Large (18")
+                    </label>
+                  </div>
+               </div>
+           </div>
+           
+           <div class="row mt-3">
+                <div class="col-md-3 text-right">
+                    <label class="form-check-label" for="base-sauce">Select Base Sauce</label>
+                </div>
+                <div class="col-md-9">
+                    <select id="base-sauce" name="sauce" class="form-control w-100">
+                        <option selected value="Regular">Regular</option>
+                        <option value="Pesto Sauce">Pesto Sauce</option>
+                        <option value="Italian Tomato Sauce">Italian Tomato Sauce</option>
+                        <option value="Creamy Garlic">Creamy Garlic</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3 text-right">Select Toppings</div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2 class="h3">Veggie</h2>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings" value="Red Pepper" id="topping1">
+                                <label class="form-check-label" for="topping1">
+                                  Red Pepper (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Green Pepper" id="topping2">
+                                <label class="form-check-label" for="topping2">
+                                  Green Pepper (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Green Olives" id="topping3">
+                                <label class="form-check-label" for="topping3">
+                                  Green Olives (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Mushrooms" id="topping4">
+                                <label class="form-check-label" for="topping4">
+                                  Mushrooms (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Pineapple" id="topping5">
+                                <label class="form-check-label" for="topping5">
+                                  Pineapple (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Red Onion" id="topping6">
+                                <label class="form-check-label" for="topping6">
+                                  Red Onion (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Tometo" id="topping7">
+                                <label class="form-check-label" for="topping7">
+                                  Tometo (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="toppings"  value="Italian Ham" id="topping14">
+                              <label class="form-check-label" for="topping14">
+                                X-Cheese (+ $1)
+                              </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <h2 class="h3">Meat</h2>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Pepperoni" id="topping8">
+                                <label class="form-check-label" for="topping8">
+                                  Pepperoni (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Salami" id="topping9">
+                                <label class="form-check-label" for="topping9">
+                                  Salami (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Chicken" id="topping10">
+                                <label class="form-check-label" for="topping10">
+                                  Chicken (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Ground Beef" id="topping11">
+                                <label class="form-check-label" for="topping11">
+                                  Ground Beef (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Bacon Strips" id="topping12">
+                                <label class="form-check-label" for="topping12">
+                                  Bacon Strips (+ $1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="toppings"  value="Italian Ham" id="topping13">
+                                <label class="form-check-label" for="topping13">
+                                  Italian Ham (+ $1)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row mt-3">
+                <div class="col-md-3 text-right">
+                    <label class="form-check-label" for="notes">
+                        Special Note
+                      </label> 
+                </div>
+                <div class="col-md-9">
+                    <textarea class="form-control" id="notes" ></textarea>
+                </div>
+            </div> -->
+            <div class="row mt-3">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-success px-5 font-weight-bold">Add to Cart</button>
+                </div>
+            </div>
+        </form>
+       
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./js/place-order.js"></script>
+	   <footer>
+                 Copyright &copy; 2020 Himani Modi <br>
+                
+       </footer>
+</body>
+</html>
